@@ -1,0 +1,155 @@
+:root {
+  --primary: #fff;
+  --secondary: #000;
+  --box-shadow: 0 0 0 2px var(--primary);
+  --circle-shadow: 0 0 5px 5px var(--primary);
+  --cubic-transition: cubic-bezier(0, 0.45, 0.09, 0.99);
+
+  --bold-ff: "Futura bold";
+  --medium-ff: "Futura medium";
+  --light-ff: "Futura light";
+  --xtrabold-ff: "Futura extrabold";
+
+  --regular-secondary-ff: "Fira code regular";
+  --medium-secondary-ff: "Fira code medium";
+  --semibold-secondary-ff: "Fira code semibold";
+  --bold-secondary-ff: "Fira code bold";
+}
+
+/* .dark {
+   
+  --white-opacity-70: rgba(255, 255, 255, 0.7);
+  --white-opacity-50: rgba(255, 255, 255, 0.5);
+  --section-info-bg: rgba(0, 0, 0, 0.5);
+  --main-background: url(./images/black_mountains.webp) no-repeat center center / cover;
+  --box-shadow: 0 0 0 3px var(--primary);
+  --circle-shadow: 0 0 10px var(--white-opacity-70), 0 0 20px var(--white-opacity-70), 0 0 30px var(--white-opacity-70),
+    0 0 40px var(--white-opacity-70), 0 0 50px var(--white-opacity-70), 0 0 60px var(--white-opacity-70);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  color: var(--primary);
+  background: var(--secondary);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 20px;
+  font-family: var(--medium-ff);
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 0 0 70px;
+}
+
+li {
+  list-style: none;
+}
+
+.section__button {
+  margin: 20px 0 0 0;
+  background: var(--primary);
+  border-radius: 5px;
+  color: var(--secondary);
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  padding: 10px 40px;
+  text-align: center;
+  width: 250px;
+  font-family: var(--medium-ff);
+}
+
+.section__icons {
+  margin: 15px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.section__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+
+.section__container {
+  width: 55%;
+  height: 400px;
+  background: var(--secondary);
+  overflow: hidden;
+  border: 3px solid var(--primary);
+  border-radius: 15px;
+}
+
+.section__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 70px;
+  font-family: var(--bold-ff);
+}
+
+.text {
+  position: relative;
+  margin-top: 30px;
+  width: 80%;
+}
+
+.text::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  left: 0;
+  top: -20px;
+  background: var(--primary);
+  animation: line 0.8s forwards;
+}
+
+.current {
+  width: 50px;
+}
+
+.hovereffect {
+  transition: 0.2s;
+}
+
+.hovereffect:hover {
+  opacity: 0.7;
+}
+
+@keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

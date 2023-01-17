@@ -1,0 +1,35 @@
+.menu__nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: var(--secondary);
+  z-index: 3;
+  transform: translateY(-120%);
+  transition: 0.5s;
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.menu__nav__link {
+  position: relative;
+  font-size: 45px;
+  font-family: var(--xtrabold-ff);
+}
+
+.menu__nav__link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: 0.3s var(--cubic-transition);
+}
+.menu__nav__link:hover::after {
+  width: 100%;
+}

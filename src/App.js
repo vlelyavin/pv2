@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header";
+import { Menu } from "./components/Menu";
+import { NavBar } from "./components/NavBar";
+import { Intro } from "./components/Intro";
+import { Projects } from "./components/Projects";
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
+import { useReducer } from "react";
+import { mainReducer, INITIAL_STATE } from "./reducers/mainReducer";
+import "./global.css";
+import "./fonts/fonts.css";
+import { SET_INDEX, SET_SCROLL_TOP } from "./actions/actions";
+export const App = () => {
+  const [state, dispatch] = useReducer(mainReducer, INITIAL_STATE);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+      if (e.deltaY < 0 && state.scrollTop > 0) {
+        state.scrollTop -= window.innerHeight;
+        state.index--;
+      } else if (e.deltaY > 0 && state.scrollTop < window.innerHeight * 3) {
+        state.scrollTop += window.innerHeight;
+        state.index++;
+      }
+      window.scrollTo(0, state.scrollTop);
+      dispatch({ type: SET_SCROLL_TOP, payload: state.scrollTop });
+      dispatch({ type: SET_INDEX, payload: state.index });
+    },
+    { passive: false }
   );
-}
 
-export default App;
+  return (
+    <>
+      <Header state={state} dispatch={dispatch} />
+      <Menu state={state} dispatch={dispatch} />
+      <NavBar state={state} dispatch={dispatch} />
+      <Intro index={state.index} />
+      <Projects />
+      <About />
+      <Contact />
+    </>
+  );
+};

@@ -1,0 +1,46 @@
+.console {
+  box-shadow: inset var(--box-shadow);
+}
+
+.projects__app__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  font-size: clamp(16px, 1.5vw, 20px);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 4px 12px 0;
+  color: var(--secondary);
+  background: var(--primary);
+  font-family: var(--semibold-secondary-ff);
+}
+
+.projects__app__header__buttons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90px;
+  height: 100%;
+}
+.projects__app__header__button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.projects__app__textarea {
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+  color: var(--primary);
+  background: var(--secondary);
+  border: none;
+  outline: none;
+  resize: none;
+  white-space: normal;
+  font-family: var(--medium-secondary-ff);
+}
