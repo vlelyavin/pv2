@@ -3,7 +3,7 @@ import { Menu } from "./components/Menu";
 import { NavBar } from "./components/NavBar";
 import { Intro } from "./components/Intro";
 import { Projects } from "./components/Projects";
-import { About } from "./components/About";
+import { Info } from "./components/Info";
 import { Contact } from "./components/Contact";
 import { useReducer } from "react";
 import { mainReducer, INITIAL_STATE } from "./reducers/mainReducer";
@@ -38,7 +38,7 @@ export const App = () => {
       <NavBar state={state} dispatch={dispatch} />
       <Intro index={state.index} />
       <Projects />
-      <About />
+      <Info state={state} dispatch={dispatch} />
       <Contact />
     </>
   );

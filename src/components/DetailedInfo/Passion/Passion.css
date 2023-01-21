@@ -1,0 +1,18 @@
+.passion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.passion__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.passion__item__image {
+  width: 120px;
+  height: 120px;
+}

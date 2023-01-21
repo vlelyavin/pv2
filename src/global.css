@@ -153,3 +153,25 @@ li {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1250px) {
+  .section {
+    padding: 0;
+    flex-direction: column;
+    align-items: left;
+    gap: 50px;
+  }
+  .section__info {
+    text-align: center;
+    width: 55%;
+  }
+  .section__button {
+    width: 100%;
+  }
+  .section__icons {
+    justify-content: center;
+  }
+  .text {
+    width: 100%;
+  }
+}

@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import mtb from "../../images/mtb.png";
-import "./About.css";
+import "./GeneralInfo.css";
 
-export const About = () => {
+export const GeneralInfo = () => {
   const bicycle = useRef();
   useEffect(() => {
     window.addEventListener(
@@ -10,7 +11,6 @@ export const About = () => {
       (e) => (bicycle.current.style.transform = `scale(2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`)
     );
   }, []);
-
   return (
     <section className="section">
       <div className="section__info">
@@ -19,9 +19,9 @@ export const About = () => {
           I love technology, biking
           <br /> and travelling
         </p>
-        <a href="https://github.com/vlelyavin" className="section__button hovereffect">
+        <Link to="/pv2/detailedInfo/" className="section__button hovereffect">
           Show me more
-        </a>
+        </Link>
       </div>
       <div className="section__container">
         <img ref={bicycle} src={mtb} alt="mtb" className="section__image bicycle" />
