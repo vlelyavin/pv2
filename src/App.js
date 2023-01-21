@@ -5,7 +5,7 @@ import { Intro } from "./components/Intro";
 import { Projects } from "./components/Projects";
 import { Info } from "./components/Info";
 import { Contact } from "./components/Contact";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { mainReducer, INITIAL_STATE } from "./reducers/mainReducer";
 import "./global.css";
 import "./fonts/fonts.css";
@@ -27,15 +27,9 @@ export const App = () => {
     dispatch({ type: SET_INDEX, payload: state.index });
   };
 
-  window.addEventListener("wheel", customScrollingFunc, { passive: false });
-
-  window.addEventListener("load", () => {
-    if (window.innerWidth < 1000) {
-      window.removeEventListener("wheel", customScrollingFunc, { passive: false });
-    } else {
-      window.addEventListener("wheel", customScrollingFunc, { passive: false });
-    }
-  });
+  useEffect(() => {
+    if (window.innerWidth > 1000) window.addEventListener("wheel", customScrollingFunc, { passive: false });
+  }, []);
 
   return (
     <>
