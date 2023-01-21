@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pv2/static/css/main.2592026c.css",
-    "main.js": "/pv2/static/js/main.9e205028.js",
+    "main.css": "/pv2/static/css/main.3f3a2810.css",
+    "main.js": "/pv2/static/js/main.4263cbeb.js",
     "static/media/mtb.png": "/pv2/static/media/mtb.ad2add2cd684282b8f95.png",
     "static/media/FiraCode-Bold.ttf": "/pv2/static/media/FiraCode-Bold.06506052e5335a624984.ttf",
     "static/media/FiraCode-SemiBold.ttf": "/pv2/static/media/FiraCode-SemiBold.bc12b7185e715a57c937.ttf",
@@ -12,14 +12,15 @@
     "static/media/futuraheavy.ttf": "/pv2/static/media/futuraheavy.af72c25a6945b0f48abb.ttf",
     "static/media/futuramedium.ttf": "/pv2/static/media/futuramedium.4e762c29ef7b44ca51cb.ttf",
     "static/media/futuralight.ttf": "/pv2/static/media/futuralight.ead7282f8edac7904e53.ttf",
+    "static/media/next-js.svg": "/pv2/static/media/next-js.7ad1b36598e17831d401533dbbc58d39.svg",
     "static/media/git.webp": "/pv2/static/media/git.f3ab5a4b7842e46475d5.webp",
     "static/media/inst.webp": "/pv2/static/media/inst.31974a087ac6ed5c4d38.webp",
     "index.html": "/pv2/index.html",
-    "main.2592026c.css.map": "/pv2/static/css/main.2592026c.css.map",
-    "main.9e205028.js.map": "/pv2/static/js/main.9e205028.js.map"
+    "main.3f3a2810.css.map": "/pv2/static/css/main.3f3a2810.css.map",
+    "main.4263cbeb.js.map": "/pv2/static/js/main.4263cbeb.js.map"
   },
   "entrypoints": [
-    "static/css/main.2592026c.css",
-    "static/js/main.9e205028.js"
+    "static/css/main.3f3a2810.css",
+    "static/js/main.4263cbeb.js"
   ]
 }
