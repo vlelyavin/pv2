@@ -12,12 +12,12 @@
   transform: translateY(-120%);
   transition: 0.5s;
   box-shadow: 0 0 0 3px var(--primary);
+  font-size: 45px;
+  font-family: var(--xtrabold-ff);
 }
 
 .menu__nav__link {
   position: relative;
-  font-size: 45px;
-  font-family: var(--xtrabold-ff);
 }
 
 .menu__nav__link::after {

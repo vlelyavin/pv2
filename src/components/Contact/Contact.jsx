@@ -6,11 +6,13 @@ import "./Contact.css";
 
 export const Contact = () => {
   const spaceman = useRef();
+
+  const spacemanInteractionFunc = (e) => {
+    spaceman.current.style.transform = `scale(1.2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`;
+  };
+
   useEffect(() => {
-    window.addEventListener(
-      "mousemove",
-      (e) => (spaceman.current.style.transform = `scale(1.2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`)
-    );
+    if (window.innerWidth > 1000) window.addEventListener("mousemove", spacemanInteractionFunc);
   }, []);
 
   return (

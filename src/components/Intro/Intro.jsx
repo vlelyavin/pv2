@@ -4,11 +4,14 @@ import "./Intro.css";
 export const Intro = () => {
   const text = useRef();
   const circle = useRef();
+
+  const planetInteractionFunc = (e) => {
+    text.current.style.transform = `translate(-${e.x / 100}px, -${e.y / 100}px)`;
+    circle.current.style.transform = `translate(-${e.x / 40}px, -${e.y / 40}px)`;
+  };
+
   useEffect(() => {
-    window.addEventListener("mousemove", (e) => {
-      text.current.style.transform = `translate(-${e.x / 100}px, -${e.y / 100}px)`;
-      circle.current.style.transform = `translate(-${e.x / 40}px, -${e.y / 40}px)`;
-    });
+    if (window.innerWidth > 1000) window.addEventListener("mousemove", planetInteractionFunc);
   }, []);
 
   return (

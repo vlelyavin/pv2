@@ -5,12 +5,15 @@ import "./GeneralInfo.css";
 
 export const GeneralInfo = () => {
   const bicycle = useRef();
+
+  const bicycleInteractionFunc = (e) => {
+    bicycle.current.style.transform = `scale(2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`;
+  };
+
   useEffect(() => {
-    window.addEventListener(
-      "mousemove",
-      (e) => (bicycle.current.style.transform = `scale(2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`)
-    );
+    if (window.innerWidth > 1000) window.addEventListener("mousemove", bicycleInteractionFunc);
   }, []);
+
   return (
     <section className="section">
       <div className="section__info">

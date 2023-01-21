@@ -154,12 +154,12 @@ li {
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1000px) {
   .section {
     padding: 0;
     flex-direction: column;
     align-items: left;
-    gap: 50px;
+    gap: 70px;
   }
   .section__info {
     text-align: center;
@@ -167,11 +167,62 @@ li {
   }
   .section__button {
     width: 100%;
+    font-size: 30px;
   }
   .section__icons {
     justify-content: center;
   }
   .text {
+    font-size: 30px;
     width: 100%;
   }
+  .title {
+    font-size: 100px;
+  }
+  /* header */
+  .header__title {
+    font-size: 42px;
+    font-family: var(--xtrabold-ff);
+  }
+  .header__icon {
+    width: 80px;
+    height: 80px;
+  }
+  .header__menu {
+    width: 80px;
+    height: 50px;
+  }
+  .header__menu__upper,
+  .header__menu__lower {
+    width: 60px;
+    height: 5px;
+  }
+  .upperRotation {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .lowerRotation {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  /* sidenav */
+  .sideNav {
+    display: none;
+  }
+  /* menu */
+  .menu__nav {
+    font-size: 60px;
+  }
+  /* intro */
+  .intro__circle {
+    position: relative;
+  }
+  /* projects */
+  .projects__app__textarea {
+    font-size: 22px;
+  }
+  .projects__app__header__title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
 }
