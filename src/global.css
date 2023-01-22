@@ -1,7 +1,7 @@
 :root {
   --primary: #fff;
   --secondary: #000;
-  --box-shadow: 0 0 0 2px var(--primary);
+  --box-shadow: 0 0 0 3px var(--primary);
   --circle-shadow: 0 0 5px 5px var(--primary);
   --cubic-transition: cubic-bezier(0, 0.45, 0.09, 0.99);
 
@@ -15,17 +15,6 @@
   --semibold-secondary-ff: "Fira code semibold";
   --bold-secondary-ff: "Fira code bold";
 }
-
-/* .dark {
-   
-  --white-opacity-70: rgba(255, 255, 255, 0.7);
-  --white-opacity-50: rgba(255, 255, 255, 0.5);
-  --section-info-bg: rgba(0, 0, 0, 0.5);
-  --main-background: url(./images/black_mountains.webp) no-repeat center center / cover;
-  --box-shadow: 0 0 0 3px var(--primary);
-  --circle-shadow: 0 0 10px var(--white-opacity-70), 0 0 20px var(--white-opacity-70), 0 0 30px var(--white-opacity-70),
-    0 0 40px var(--white-opacity-70), 0 0 50px var(--white-opacity-70), 0 0 60px var(--white-opacity-70);
-} */
 
 * {
   margin: 0;
@@ -210,17 +199,67 @@ li {
   /* menu */
   .menu__nav {
     font-size: 60px;
+    transition: none;
+    box-shadow: none;
   }
+
   /* intro */
   .intro__circle {
     position: relative;
+    animation: circleAnim 1.2s ease forwards;
   }
+
   /* projects */
   .projects__app__textarea {
     font-size: 22px;
   }
   .projects__app__header__title {
     font-size: 25px;
+  }
+
+  /* detailedInfo */
+
+  .detailedInfo__header__link {
+    font-size: 50px;
+  }
+
+  .detailedInfo__button {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* skills */
+  .skills {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+  }
+  .skills__item {
+    width: 60%;
+  }
+  .skills__item__name {
+    font-size: 42px;
+  }
+
+  /* passion */
+  .passion {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+  }
+  .passion__item__image {
+    width: 200px;
+    height: 200px;
+  }
+  .passion__item__title {
+    font-size: 45px;
+  }
+
+  /* about */
+  .about {
+    font-size: 45px;
   }
 }
 

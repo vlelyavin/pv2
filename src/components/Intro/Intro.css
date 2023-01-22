@@ -22,8 +22,6 @@
   border-radius: 50%;
   -webkit-transform: rotate3d(4, 3, 2, -90deg);
   transform: rotate3d(4, 3, 2, -90deg);
-  /* -webkit-animation: orbit 5s infinite;
-  animation: orbit 5s infinite; */
 }
 .intro__circle::before {
   top: -60px;
