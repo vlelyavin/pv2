@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pv2/static/css/main.81c4a121.css",
+    "main.css": "/pv2/static/css/main.b846723b.css",
     "main.js": "/pv2/static/js/main.c28da6b2.js",
     "static/media/mtb.png": "/pv2/static/media/mtb.ad2add2cd684282b8f95.png",
     "static/media/FiraCode-Bold.ttf": "/pv2/static/media/FiraCode-Bold.06506052e5335a624984.ttf",
@@ -16,11 +16,11 @@
     "static/media/git.webp": "/pv2/static/media/git.f3ab5a4b7842e46475d5.webp",
     "static/media/inst.webp": "/pv2/static/media/inst.31974a087ac6ed5c4d38.webp",
     "index.html": "/pv2/index.html",
-    "main.81c4a121.css.map": "/pv2/static/css/main.81c4a121.css.map",
+    "main.b846723b.css.map": "/pv2/static/css/main.b846723b.css.map",
     "main.c28da6b2.js.map": "/pv2/static/js/main.c28da6b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.81c4a121.css",
+    "static/css/main.b846723b.css",
     "static/js/main.c28da6b2.js"
   ]
 }
