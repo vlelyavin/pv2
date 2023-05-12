@@ -16,3 +16,9 @@
   background: var(--primary);
   transition: 0.2s;
 }
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .sideNav {
+    display: none;
+  }
+}

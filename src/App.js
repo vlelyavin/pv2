@@ -7,9 +7,14 @@ import { Info } from "./components/Info";
 import { Contact } from "./components/Contact";
 import { useEffect, useReducer } from "react";
 import { mainReducer, INITIAL_STATE } from "./reducers/mainReducer";
+import { SET_INDEX, SET_SCROLL_TOP } from "./constants/actionsTypes";
+import { toggleListeners } from "./hooks/toggleListeners";
 import "./global.css";
 import "./fonts/fonts.css";
-import { SET_INDEX, SET_SCROLL_TOP } from "./actions/actions";
+import { Route, Routes } from "react-router-dom";
+import { GeneralInfo } from "./components/GeneralInfo/GeneralInfo";
+import { DetailedInfo } from "./components/DetailedInfo/DetailedInfo";
+
 export const App = () => {
   const [state, dispatch] = useReducer(mainReducer, INITIAL_STATE);
 
@@ -28,17 +33,20 @@ export const App = () => {
   };
 
   useEffect(() => {
-    if (window.innerWidth > 1000) window.addEventListener("wheel", customScrollingFunc, { passive: false });
+    toggleListeners(customScrollingFunc, "wheel", state, { passive: false });
   }, []);
 
   return (
     <>
-      <Header state={state} dispatch={dispatch} />
-      <Menu state={state} dispatch={dispatch} />
-      <NavBar state={state} dispatch={dispatch} />
-      <Intro index={state.index} />
+      <Header />
+      <Menu />
+      <NavBar />
+      <Intro />
       <Projects />
-      <Info state={state} dispatch={dispatch} />
+      <Routes>
+        <Route path="/pv2/" element={<GeneralInfo />} />
+        <Route path="/pv2/detailedInfo//*" element={<DetailedInfo />} />
+      </Routes>
       <Contact />
     </>
   );

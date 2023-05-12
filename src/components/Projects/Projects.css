@@ -44,3 +44,12 @@
   white-space: normal;
   font-family: var(--medium-secondary-ff);
 }
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .projects__app__textarea {
+    font-size: 22px;
+  }
+  .projects__app__header__title {
+    font-size: 25px;
+  }
+}

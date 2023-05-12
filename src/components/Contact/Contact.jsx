@@ -1,18 +1,19 @@
 import { useEffect, useRef } from "react";
+import { toggleListeners } from "../../hooks/toggleListeners";
 import spacemanDark from "../../images/contact_dark.webp";
 import git from "../../images/git.webp";
 import inst from "../../images/inst.webp";
 import "./Contact.css";
 
-export const Contact = () => {
-  const spaceman = useRef();
+export const Contact = (props) => {
+  const spacemanImageRef = useRef();
 
   const spacemanInteractionFunc = (e) => {
-    spaceman.current.style.transform = `scale(1.2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`;
+    spacemanImageRef.current.style.transform = `scale(1.2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`;
   };
 
   useEffect(() => {
-    if (window.innerWidth > 1000) window.addEventListener("mousemove", spacemanInteractionFunc);
+    toggleListeners(spacemanInteractionFunc, "mousemove", props.state);
   }, []);
 
   return (
@@ -30,7 +31,7 @@ export const Contact = () => {
         </div>
       </div>
       <div className="section__container">
-        <img ref={spaceman} src={spacemanDark} alt="spaceman" className="section__image spaceman" />
+        <img ref={spacemanImageRef} src={spacemanDark} alt="spaceman" className="section__image spaceman" />
       </div>
     </section>
   );

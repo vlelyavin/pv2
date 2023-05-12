@@ -1,23 +1,26 @@
 import { useEffect, useRef } from "react";
-import { SHOW_MENU, SET_INDEX, SET_SCROLL_TOP } from "../../actions/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { setIndex, setScrollTop, toggleMenuVisibility } from "../../constants/actions";
 import "./NavBar.css";
 
-export const NavBar = (props) => {
-  const sideNav = useRef();
+export const NavBar = () => {
+  const index = useSelector((state) => state.index);
+  const dispatch = useDispatch();
+  const sideNavRef = useRef();
 
   const scrollToSection = (pixels, index) => {
     window.scrollTo(0, pixels);
-    props.dispatch({ type: SHOW_MENU, payload: false });
-    props.dispatch({ type: SET_INDEX, payload: index });
-    props.dispatch({ type: SET_SCROLL_TOP, payload: pixels });
+    dispatch(toggleMenuVisibility(false));
+    dispatch(setIndex(index));
+    dispatch(setScrollTop(pixels));
   };
 
   useEffect(() => {
-    for (let item of sideNav.current.children) item.classList.remove("current");
-    sideNav.current.children[props.state.index].classList.add("current");
-  }, [props.state.index]);
+    for (let item of sideNavRef.current.children) item.classList.remove("current");
+    sideNavRef.current.children[index].classList.add("current");
+  }, [index]);
   return (
-    <nav className="sideNav" ref={sideNav}>
+    <nav className="sideNav" ref={sideNavRef}>
       <li className="sideNav__link hovereffect" onClick={() => scrollToSection(0, 0)}></li>
       <li className="sideNav__link hovereffect" onClick={() => scrollToSection(window.innerHeight, 1)}></li>
       <li className="sideNav__link hovereffect" onClick={() => scrollToSection(window.innerHeight * 2, 2)}></li>

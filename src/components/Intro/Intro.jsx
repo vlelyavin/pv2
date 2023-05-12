@@ -1,7 +1,10 @@
 import { useEffect, useRef } from "react";
+import { toggleListeners } from "../../hooks/toggleListeners";
 import "./Intro.css";
+import { useSelector } from "react-redux";
 
 export const Intro = () => {
+  const state = useSelector((state) => state);
   const text = useRef();
   const circle = useRef();
 
@@ -11,7 +14,7 @@ export const Intro = () => {
   };
 
   useEffect(() => {
-    if (window.innerWidth > 1000) window.addEventListener("mousemove", planetInteractionFunc);
+    toggleListeners(planetInteractionFunc, "mousemove", state);
   }, []);
 
   return (

@@ -1,26 +1,29 @@
 import { useEffect, useRef } from "react";
-import { SET_INDEX, SET_SCROLL_TOP, SHOW_MENU } from "../../actions/actions";
+import { setIndex, setScrollTop, toggleMenuVisibility } from "../../constants/actions";
+import { useDispatch, useSelector } from "react-redux";
 import "./Menu.css";
 
-export const Menu = (props) => {
-  const menuNav = useRef();
+export const Menu = () => {
+  const isMenuVisible = useSelector((state) => state.isMenuVisible);
+  const dispatch = useDispatch();
+  const menuNavRef = useRef();
 
   const scrollToSection = (pixels, index) => {
     window.scrollTo(0, pixels);
-    props.dispatch({ type: SHOW_MENU, payload: false });
-    props.dispatch({ type: SET_INDEX, payload: index });
-    props.dispatch({ type: SET_SCROLL_TOP, payload: pixels });
+    dispatch(toggleMenuVisibility(false));
+    dispatch(setIndex(index));
+    dispatch(setScrollTop(pixels));
   };
 
   useEffect(() => {
-    if (props.state.showMenu) {
-      menuNav.current.style.transform = "translateY(0)";
+    if (isMenuVisible) {
+      menuNavRef.current.style.transform = "translateY(0)";
     } else {
-      menuNav.current.style.transform = "translateY(-120%)";
+      menuNavRef.current.style.transform = "translateY(-120%)";
     }
-  }, [props.state.showMenu]);
+  }, [isMenuVisible]);
   return (
-    <nav className="menu__nav" ref={menuNav}>
+    <nav className="menu__nav" ref={menuNavRef}>
       <li className="menu__nav__link" onClick={() => scrollToSection(0, 0)}>
         Intro
       </li>

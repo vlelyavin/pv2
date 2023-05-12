@@ -1,17 +1,20 @@
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { toggleListeners } from "../../hooks/toggleListeners";
 import mtb from "../../images/mtb.png";
 import "./GeneralInfo.css";
+import { useSelector } from "react-redux";
 
 export const GeneralInfo = () => {
-  const bicycle = useRef();
+  const bicycleImageRef = useRef();
+  const state = useSelector((state) => state);
 
   const bicycleInteractionFunc = (e) => {
-    bicycle.current.style.transform = `scale(2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`;
+    bicycleImageRef.current.style.transform = `scale(2) translate(${e.clientX / 900}%, ${e.clientY / 900}%)`;
   };
 
   useEffect(() => {
-    if (window.innerWidth > 1000) window.addEventListener("mousemove", bicycleInteractionFunc);
+    toggleListeners(bicycleInteractionFunc, "mousemove", state);
   }, []);
 
   return (
@@ -27,7 +30,7 @@ export const GeneralInfo = () => {
         </Link>
       </div>
       <div className="section__container">
-        <img ref={bicycle} src={mtb} alt="mtb" className="section__image bicycle" />
+        <img ref={bicycleImageRef} src={mtb} alt="mtb" className="section__image bicycle" />
       </div>
     </section>
   );

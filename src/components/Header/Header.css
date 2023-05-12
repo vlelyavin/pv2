@@ -57,3 +57,32 @@
 .lowerRotation {
   transform: translateY(-5.5px) rotate(-45deg);
 }
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .header {
+    backdrop-filter: blur(5px);
+  }
+  .header__title {
+    font-size: 42px;
+    font-family: var(--xtrabold-ff);
+  }
+  .header__icon {
+    width: 80px;
+    height: 80px;
+  }
+  .header__menu {
+    width: 80px;
+    height: 50px;
+  }
+  .header__menu__upper,
+  .header__menu__lower {
+    width: 60px;
+    height: 5px;
+  }
+  .upperRotation {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .lowerRotation {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

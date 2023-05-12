@@ -1,18 +1,23 @@
-import { SET_INDEX, SET_SCROLL_TOP, SHOW_MENU, SHOW_DETAILED_INFO } from "../actions/actions";
+import {
+  SET_INDEX,
+  SET_SCROLL_TOP,
+  TOGGLE_MENU_VISIBILITY,
+  TOGGLE_DETAILED_INFO_VISIBILITY,
+} from "../constants/actionsTypes";
 
 export const INITIAL_STATE = {
-  showDetailedInfo: false,
-  showMenu: false,
+  isDetailedInfoVisible: false,
+  isMenuVisible: false,
   scrollTop: 0,
   index: 0,
 };
 
-export const mainReducer = (state, action) => {
+export const mainReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SHOW_DETAILED_INFO:
-      return { ...state, showDetailedInfo: action.payload };
-    case SHOW_MENU:
-      return { ...state, showMenu: action.payload };
+    case TOGGLE_DETAILED_INFO_VISIBILITY:
+      return { ...state, isDetailedInfoVisible: action.payload };
+    case TOGGLE_MENU_VISIBILITY:
+      return { ...state, isMenuVisible: action.payload };
     case SET_INDEX:
       return { ...state, index: action.payload };
     case SET_SCROLL_TOP:

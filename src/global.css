@@ -147,7 +147,7 @@ li {
   .section {
     flex-direction: column;
     gap: 70px;
-    margin: 150px 0;
+    margin: 300px 0;
     padding: 0 40px;
     height: auto;
   }
@@ -173,105 +173,6 @@ li {
     font-size: 100px;
     white-space: nowrap;
   }
-  /* header */
-  .header {
-    backdrop-filter: blur(5px);
-  }
-  .header__title {
-    font-size: 42px;
-    font-family: var(--xtrabold-ff);
-  }
-  .header__icon {
-    width: 80px;
-    height: 80px;
-  }
-  .header__menu {
-    width: 80px;
-    height: 50px;
-  }
-  .header__menu__upper,
-  .header__menu__lower {
-    width: 60px;
-    height: 5px;
-  }
-  .upperRotation {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .lowerRotation {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-  /* sidenav */
-  .sideNav {
-    display: none;
-  }
-  /* menu */
-  .menu__nav {
-    font-size: 60px;
-    transition: none;
-    box-shadow: none;
-  }
-
-  /* intro */
-  .intro__circle {
-    position: relative;
-    animation: circleAnim 1.2s ease forwards;
-  }
-
-  /* projects */
-  .projects__app__textarea {
-    font-size: 22px;
-  }
-  .projects__app__header__title {
-    font-size: 25px;
-  }
-
-  /* detailedInfo */
-
-  .detailedInfo__header__link {
-    font-size: 4vw;
-  }
-
-  .detailedInfo__button {
-    width: 100px;
-    height: 100px;
-    margin: 50px 0 0 0;
-  }
-
-  /* skills */
-  .skills {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .skills__item {
-    width: 60%;
-  }
-  .skills__item__name {
-    font-size: 42px;
-  }
-
-  /* passion */
-  .passion {
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .passion__item__image {
-    width: 200px;
-    height: 200px;
-  }
-  .passion__item__title {
-    font-size: 45px;
-  }
-
-  /* about */
-  .about {
-    font-size: 45px;
-    font-size: 4vw;
-  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
@@ -280,7 +181,6 @@ li {
     justify-content: center;
     align-items: center;
     gap: 70px;
-    margin: 50px 0;
   }
   .section__info {
     width: auto;
@@ -301,11 +201,5 @@ li {
   }
   .text {
     width: 100%;
-  }
-
-  /* intro */
-  .intro__circle {
-    position: relative;
-    animation: circleAnim 1.2s ease forwards;
   }
 }
