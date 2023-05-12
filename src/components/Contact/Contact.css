@@ -1,3 +1,8 @@
 .spaceman {
   transform: scale(1.2);
 }
+
+.telegramContactIconContainer {
+  width: 45px !important;
+  height: 45px !important;
+}

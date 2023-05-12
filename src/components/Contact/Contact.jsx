@@ -3,6 +3,7 @@ import { toggleListeners } from "../../hooks/toggleListeners";
 import spacemanDark from "../../images/contact_dark.webp";
 import git from "../../images/git.webp";
 import inst from "../../images/inst.webp";
+import telegramWhiteIcon from "../../images/telegramWhite.svg";
 import "./Contact.css";
 
 export const Contact = (props) => {
@@ -22,11 +23,14 @@ export const Contact = (props) => {
         <div className="title">Contact</div>
         <p className="text">vlelyavin@gmail.com</p>
         <div className="section__icons">
-          <a href="https:github.com/vlelyavin">
+          <a href="https:github.com/vlelyavin" className="section__icon__container">
             <img src={git} alt="git" className="section__icon hovereffect" />
           </a>
-          <a href="https:instagram.com/v._lelyavin">
+          <a href="https:instagram.com/v._lelyavin" className="section__icon__container">
             <img src={inst} alt="inst" className="section__icon hovereffect" />
+          </a>
+          <a href="https://t.me/vlelyavin" className="section__icon__container telegramContactIconContainer">
+            <img src={telegramWhiteIcon} alt="telegram" className="section__icon hovereffect" />
           </a>
         </div>
       </div>

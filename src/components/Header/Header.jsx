@@ -1,5 +1,5 @@
-import theme from "../../images/moon.png";
 import git from "../../images/git.webp";
+import telegramWhiteIcon from "../../images/telegramWhite.svg";
 import { useRef } from "react";
 import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,9 +24,11 @@ export const Header = () => {
         vlelyavin
       </p>
       <div className="header__right">
-        <img className="header__icon hovereffect" src={theme} alt="themeIcon" />
-        <a href="https:github.com/vlelyavin">
+        <a href="https:github.com/vlelyavin" className="header__icon__container">
           <img className="header__icon hovereffect" src={git} alt="git" />
+        </a>
+        <a href="https://t.me/vlelyavin" className="header__icon__container headerTelegramIconContainer">
+          <img className="header__icon hovereffect" src={telegramWhiteIcon} alt="telegram" />
         </a>
         <div className="header__menu hovereffect" onClick={() => dispatch(toggleMenuVisibility(!isMenuVisible))}>
           <div className={classNames("header__menu__upper", { upperRotation: isMenuVisible })} ref={upperLineRef}></div>
