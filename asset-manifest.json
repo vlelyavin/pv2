@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pv2/static/css/main.19b5d1f3.css",
-    "main.js": "/pv2/static/js/main.c28da6b2.js",
+    "main.css": "/pv2/static/css/main.b56102bc.css",
+    "main.js": "/pv2/static/js/main.09ac9701.js",
     "static/media/mtb.png": "/pv2/static/media/mtb.ad2add2cd684282b8f95.png",
     "static/media/FiraCode-Bold.ttf": "/pv2/static/media/FiraCode-Bold.06506052e5335a624984.ttf",
     "static/media/FiraCode-SemiBold.ttf": "/pv2/static/media/FiraCode-SemiBold.bc12b7185e715a57c937.ttf",
@@ -13,14 +13,15 @@
     "static/media/futuramedium.ttf": "/pv2/static/media/futuramedium.4e762c29ef7b44ca51cb.ttf",
     "static/media/futuralight.ttf": "/pv2/static/media/futuralight.ead7282f8edac7904e53.ttf",
     "static/media/next-js.svg": "/pv2/static/media/next-js.7ad1b36598e17831d401533dbbc58d39.svg",
+    "static/media/telegramWhite.svg": "/pv2/static/media/telegramWhite.f7c45365156f2d001d2b69d671915bb0.svg",
     "static/media/git.webp": "/pv2/static/media/git.f3ab5a4b7842e46475d5.webp",
     "static/media/inst.webp": "/pv2/static/media/inst.31974a087ac6ed5c4d38.webp",
     "index.html": "/pv2/index.html",
-    "main.19b5d1f3.css.map": "/pv2/static/css/main.19b5d1f3.css.map",
-    "main.c28da6b2.js.map": "/pv2/static/js/main.c28da6b2.js.map"
+    "main.b56102bc.css.map": "/pv2/static/css/main.b56102bc.css.map",
+    "main.09ac9701.js.map": "/pv2/static/js/main.09ac9701.js.map"
   },
   "entrypoints": [
-    "static/css/main.19b5d1f3.css",
-    "static/js/main.c28da6b2.js"
+    "static/css/main.b56102bc.css",
+    "static/js/main.09ac9701.js"
   ]
 }
